@@ -1,0 +1,11 @@
+Q.1-> what is version control system(vcs)?
+ans-->it is a system which record changes to a file or folder anytime.
+
+Q.2->why do we need vcs?
+ans->
+
+
+
+
+two types vcs---.
+8
