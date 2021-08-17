@@ -9,3 +9,15 @@ ans->
 
 two types vcs---.
 8
+
+
+
+
+Git commands we have learnt till now :- 
+1.  git init ==> to initialize git in a floder
+2.  git config --global user.email abc@mail.com  ==> to add email
+3.  git config --global user.name yourname  ==> to add username
+4.  git config --list ==> to check the config settings
+5.  git add .   ==>  to add all the files to staging area
+6.  git add file1.css file2.html file3.txt  ==> to add specific files to staging area 
+7.  git commit -m "you commit message"  ==>  to commit the changes
