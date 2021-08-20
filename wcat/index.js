@@ -127,15 +127,68 @@ for(let file of filenames) {
                 fileData = removeAll(fileData,secondaryArgument);
             }
         }
+        if(flag =="-s"){
+            let Data = addSequence(fileData);
+            console.log(Data);
+        }
+        if(flag=="-sn"){
+            let Data = addSequenceTnel(fileData);
+            console.log(Data);
+        }
+        if(flag=="-rel"){
+            let ans=removeExtraLine(fileData);
+            for(let i=0;i<ans.length;i++){
+                console.log(ans[i]);
+          
+            }
+        }
     }
-    console.log(fileData);
+    //console.log(fileData);
 }
 
 function removeAll(string, removalData) {
     return string.split(removalData).join("");
 }
 
+function addSequence(content){
+    let contentArr= content.split("\n");
+    for(let i=0;i<contentArr.length;i++){
+        contentArr[i]=(i+i)+" "+contentArr[i];
+    }
+    return contentArr;
+}
 
+function addSequenceTnel(content){
+    let contentArr= content.split("\n");
+    let count=1;
+    for(let i=0;i<contentArr.length;i++){
+        if(contentArr[i]!=""){
+        contentArr[i]=count+" "+contentArr[i];
+        count++;
+        }
+    }
+    return contentArr;
+}
+
+function removeExtraLine(fileData){
+    let contentArr=fileData.split("\n");
+    let data=[];
+    for(let i=1;i<contentArr.length;i++){
+        if(contentArr[i]=="" && contentArr[i-1]==""){
+            contentArr[i]=null;
+        }
+        if(contentArr[i]=="" && contentArr[i-1]==null){
+            contentArr[i]=null;
+        }
+    }
+
+    for(let i=0;i<contentArr.length;i++){
+        if(contentArr[i]!=null){
+            data.push(contentArr[i]);
+        }
+    }
+    return data;
+}
 
 
 
